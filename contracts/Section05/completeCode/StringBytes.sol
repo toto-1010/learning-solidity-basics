@@ -40,7 +40,7 @@ contract StringBytes {
     /// @dev エスケープ文字\
     string public singleQuote = '\'';
     string public doubleQuote = "\"";
-    string public backSlach = "\\";
+    string public backSlash = "\\";
     string public newline = "ho\nge";
     string public tabline = "ho\tge";
 
