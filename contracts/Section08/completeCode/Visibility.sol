@@ -21,7 +21,7 @@ pragma solidity ^0.8.17;
  * visibilityをinternal|privateに変更すると、this.f()で外部から実行できなくなる
  */ 
 
-contract contractA {
+contract ContractA {
     // publicな状態変数に対してコンパイラがGetterファンクションを自動生成する(Setterは自動作成しない)
     // Getterファンクションは別で解説
     string public publicVariable = "publicVariable";
@@ -46,7 +46,7 @@ contract contractA {
 }
 
 // contractAを継承
-contract Visibility is contractA {
+contract Visibility is ContractA {
     // publicファンクションは継承先でもコントラクト内外両方からcallできる
     function callPublicFunction() public pure returns (uint) {
         // コントラクト外からのファンクションcall
