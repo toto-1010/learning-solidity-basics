@@ -21,7 +21,7 @@ pragma solidity ^0.8.17;
  * ロギングするデータ
  *  indexed属性を基本的に最大3つまで付与できる(匿名イベントの場合は最大4つ)
  *  indexedのついたパラメータでフィルタリングすることができるようになる
- *  indexedを参照型に対して指定すると、 その値のKeccak-256ハッシュが代わりにtopicとして保存される。
+ *  indexedをReference Types(参照型)に対して指定すると、 その値のKeccak-256ハッシュが代わりにtopicとして保存される。
  *  topicは特別なデータ構造のこと。それぞれ32バイトしか保持できない（なのでこれより長くなる可能性のある参照方はハッシュ化される）
  * 
  */
@@ -61,7 +61,7 @@ contract Event {
     }
 
     function stringHash(string memory s1_) public pure returns (bytes32) {
-        // indexedを参照型に対して指定すると、 その値のKeccak-256ハッシュが代わりにtopicとして保存される。
+        // indexedをReference Types(参照型)に対して指定すると、 その値のKeccak-256ハッシュが代わりにtopicとして保存される。
         return keccak256(bytes(s1_));
     }
 
